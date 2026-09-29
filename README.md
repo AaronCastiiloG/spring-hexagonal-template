@@ -64,7 +64,8 @@ Archivos:
 |---|---|
 | Nombre de la carpeta | `spring-hexagonal-template` → `gym-system-api` |
 | `pom.xml` | `artifactId` y `name`: `gym-system-api`. `groupId` si quieres otro, por ejemplo `com.gym` |
-| Paquete `com.company.template` | Opcional. Si lo cambias, mueve `src/main/java/com/company/template` y la carpeta de test, y reemplaza el paquete en los `.java` |
+| `src/main/resources/application.properties` | `spring.application.name=gym-system-api` |
+| Paquete `com.company.template` | Opcional. Un reemplazo del prefijo en todos los `.java` alcanza: `com.company.template` pasa a `com.gym.api`. `controller`, `service` y el resto de la capa se quedan. Mueve `src/main/java/com/company/template` y `src/test/java/com/company/template` para que la carpeta coincida con el paquete |
 | `docker-compose.yml` | `POSTGRES_DB` y el healthcheck: `gym-db`. `container_name`, por ejemplo `gym-system-api-db` |
 | `src/main/resources/application-local.properties` | `spring.datasource.url` a `jdbc:postgresql://localhost:5434/gym-db` |
 
